@@ -5,8 +5,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
 # Load your data (replace 'path_to_data' with actual paths)
-jd_mod = pd.read_csv(r"E:\job recommendation (DEPLOYMENT)streamlit\data\jd_mod.csv")
-cv_fin = pd.read_csv(r"E:\job recommendation (DEPLOYMENT)streamlit\data\cv_fin.csv")
+jd_mod = pd.read_csv(r"sampled_jd_mod.csv")
+cv_fin = pd.read_csv(r"cv_fin.csv")
 
 # Check if the necessary columns exist in the dataframes
 if 'jd_lem' not in jd_mod.columns or 'Current_jd' not in cv_fin.columns:
