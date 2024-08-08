@@ -4,9 +4,9 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
-# Load your data (replace 'path_to_data' with actual paths)
+# Load your data
 jd_mod = pd.read_csv(r"sampled_jd_mod.csv")
-cv_fin = pd.read_csv(r"cv_fin.csv")
+cv_fin = pd.read_csv(r"data\cv_fin.csv")
 
 # Check if the necessary columns exist in the dataframes
 if 'jd_lem' not in jd_mod.columns or 'Current_jd' not in cv_fin.columns:
@@ -95,6 +95,8 @@ else:
 
         return job_recommended
 
+
+
     # Streamlit UI
     st.title("Job Recommendation System")
 
@@ -102,13 +104,14 @@ else:
     option = st.selectbox("Choose an option", ["Recommend Jobs for Applicant", "Recommend Applicants for Job"])
 
     if option == "Recommend Jobs for Applicant":
-        applicant_id = st.text_input("Enter Applicant ID")
+        applicant_option = st.selectbox("Select Applicant", [(f"{row['Applicant_ID']} - {row['Current_position']}", row['Applicant_ID']) for _, row in cv_fin.iterrows()])
+        applicant_id = applicant_option[1]
         if st.button("Recommend Jobs"):
             if applicant_id:
                 Job_Applicant(int(applicant_id))
     elif option == "Recommend Applicants for Job":
-        job_id = st.text_input("Enter Job ID")
+        job_option = st.selectbox("Select Job", [(f"{row['Job_ID']} - {row['Job_position']}", row['Job_ID']) for _, row in jd_mod.iterrows()])
+        job_id = job_option[1]
         if st.button("Recommend Applicants"):
             if job_id:
                 Applicant_Job(int(job_id))
-
