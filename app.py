@@ -6,7 +6,7 @@ from sklearn.metrics.pairwise import linear_kernel
 
 # Load your data
 jd_mod = pd.read_csv(r"sampled_jd_mod.csv")
-cv_fin = pd.read_csv(r"data\cv_fin.csv")
+cv_fin = pd.read_csv(r"cv_fin.csv")
 
 # Check if the necessary columns exist in the dataframes
 if 'jd_lem' not in jd_mod.columns or 'Current_jd' not in cv_fin.columns:
