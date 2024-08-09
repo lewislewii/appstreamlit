@@ -146,7 +146,7 @@ else:
             )
 
     # Call the function with your image path
-    add_bg_from_local(r"imagesformodel/jobsearch.png")
+    add_bg_from_local(r"imagesformodel/jobBG.png")
 
     # Streamlit UI
     st.sidebar.title("Job Recommendation System")
