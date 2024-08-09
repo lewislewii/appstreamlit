@@ -28,7 +28,7 @@ st.markdown("""
         box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Shadow effect */
     }
     .sidebar .sidebar-content {
-        background-color: #2c4a44; /* Blue background */
+        background-color: #fff; /* Blue background */
         color: #ffffff; /* White text color for contrast */
     }
     .sidebar .sidebar-content a {
