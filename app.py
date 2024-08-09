@@ -14,12 +14,12 @@ st.markdown("""
     <style>
     .header-title {
         font-size: 2em;
-        color: #000000; /* Black color */
+        # color: #000000; /* Black color */
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow effect */
     }
     .header-subtitle {
         font-size: 1.5em;
-        color: #000000; /* Black color */
+        # color: #000000; /* Black color */
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow effect */
     }
     .logo-image {
@@ -38,7 +38,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header
-st.markdown('<img src="imagesformodel/ima.jpg" width="100" class="logo-image" />', unsafe_allow_html=True)
+st.image("imagesformodel/ima.jpg", width=100)  # Add your logo here
 
 # Apply the custom CSS classes
 st.markdown('<p class="header-title">Smart Match</p>', unsafe_allow_html=True)
