@@ -31,7 +31,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header
-st.image("imagesformodel/ima.jpg", width=100, use_column_width=False, help="Logo", caption=None, clamp=False, format="auto", channels="RGB", output_format="auto")
+st.markdown('<img src="imagesformodel/ima.jpg" width="100" class="logo-image" />', unsafe_allow_html=True)
 
 # Apply the custom CSS classes
 st.markdown('<p class="header-title">Smart Match</p>', unsafe_allow_html=True)
