@@ -9,30 +9,18 @@ import base64
 jd_mod = pd.read_csv("sampled_jd_mod.csv")
 cv_fin = pd.read_csv("cv_fin.csv")
 
-# Add custom CSS for text shadow, image border, and sidebar background
+# Add custom CSS for shadow effects
 st.markdown("""
     <style>
     .header-title {
         font-size: 2em;
-        # color: #000000; /* Black color */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow effect */
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
     .header-subtitle {
         font-size: 1.5em;
-        # color: #000000; /* Black color */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow effect */
-    }
-    .logo-image {
-        border: 5px solid #000000; /* Black border */
-        border-radius: 10px; /* Rounded corners */
-        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Shadow effect */
-    }
-    .sidebar .sidebar-content {
-        background-color: #fff; /* Blue background */
-        color: #ffffff; /* White text color for contrast */
-    }
-    .sidebar .sidebar-content a {
-        color: #ffffff; /* Ensure link color is white */
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
     </style>
 """, unsafe_allow_html=True)
@@ -43,6 +31,9 @@ st.image("imagesformodel/ima.jpg", width=100)  # Add your logo here
 # Apply the custom CSS classes
 st.markdown('<p class="header-title">Smart Match</p>', unsafe_allow_html=True)
 st.markdown('<p class="header-subtitle">Your Job and Applicant Recommendation System</p>', unsafe_allow_html=True)
+
+
+
 
 # Add background image to the main area (optional)
 def add_bg_from_local(image_file):
