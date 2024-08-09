@@ -3,17 +3,36 @@ import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
-import base64  # For adding background images
+import base64
 
 # Load your data
-jd_mod = pd.read_csv(r"sampled_jd_mod.csv")
-cv_fin = pd.read_csv(r"cv_fin.csv")
+jd_mod = pd.read_csv("sampled_jd_mod.csv")
+cv_fin = pd.read_csv("cv_fin.csv")
 
+# Add custom CSS for shadow effects
+st.markdown("""
+    <style>
+    .header-title {
+        font-size: 2em;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    .header-subtitle {
+        font-size: 1.5em;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 # Header
-st.image(r"imagesformodel/ima.jpg", width=100)  # Add your logo here
-st.title("Smart Match")
-st.subheader("Your Job and Applicant Recommendation System")
+st.image("imagesformodel/ima.jpg", width=100)  # Add your logo here
+
+# Apply the custom CSS classes
+st.markdown('<p class="header-title">Smart Match</p>', unsafe_allow_html=True)
+st.markdown('<p class="header-subtitle">Your Job and Applicant Recommendation System</p>', unsafe_allow_html=True)
+
+
 
 
 # Check if the necessary columns exist in the dataframes
