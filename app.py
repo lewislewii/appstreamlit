@@ -2,12 +2,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.paimport streamlit as st
-import pandas as pd
-import numpy as np
-from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 import base64
+
 
 # Load your data
 jd_mod = pd.read_csv("sampled_jd_mod.csv")
