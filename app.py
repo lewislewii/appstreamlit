@@ -6,12 +6,12 @@ from sklearn.metrics.pairwise import linear_kernel
 import base64  # For adding background images
 
 # Load your data
-jd_mod = pd.read_csv(r"/sampled_jd_mod.csv")
-cv_fin = pd.read_csv(r"/cv_fin.csv")
+jd_mod = pd.read_csv(r"sampled_jd_mod.csv")
+cv_fin = pd.read_csv(r"cv_fin.csv")
 
 
 # Header
-st.image(r"/imagesformodel/ima.jpg", width=100)  # Add your logo here
+st.image(r"imagesformodel/ima.jpg", width=100)  # Add your logo here
 st.title("Smart Match")
 st.subheader("Your Job and Applicant Recommendation System")
 
@@ -146,11 +146,11 @@ else:
             )
 
     # Call the function with your image path
-    add_bg_from_local(r"/imagesformodel/jobsearch.png")
+    add_bg_from_local(r"imagesformodel/jobsearch.png")
 
     # Streamlit UI
     st.sidebar.title("Job Recommendation System")
-    st.sidebar.image(r"/imagesformodel/ima.jpg", width=100)  # Add your logo here
+    st.sidebar.image(r"imagesformodel/ima.jpg", width=100)  # Add your logo here
 
     st.sidebar.header("Recommendations")
 
