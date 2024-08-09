@@ -179,4 +179,3 @@ else:
     st.sidebar.info("SmartMatch @2024")
     st.sidebar.markdown("[Contact Us](mailto:email@example.com)")
 
-ChatGPT
