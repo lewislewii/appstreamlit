@@ -6,8 +6,8 @@ from sklearn.metrics.pairwise import linear_kernel
 import base64  # For adding background images
 
 # Load your data
-jd_mod = pd.read_csv(r"\sampled_jd_mod.csv")
-cv_fin = pd.read_csv(r"\cv_fin.csv")
+jd_mod = pd.read_csv(r"/sampled_jd_mod.csv")
+cv_fin = pd.read_csv(r"/cv_fin.csv")
 
 
 # Header
