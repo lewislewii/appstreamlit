@@ -14,16 +14,16 @@ st.markdown("""
     <style>
     .header-title {
         font-size: 2em;
-        color: #000000; /* Black color */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow effect */
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
     .header-subtitle {
         font-size: 1.5em;
-        color: #000000; /* Black color */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow effect */
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
     .logo-image {
-        border: 5px solid #000000; /* Black border */
+        border: 5px solid #ffffff; /* White border */
         border-radius: 10px; /* Rounded corners */
         box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Shadow effect */
     }
@@ -36,6 +36,8 @@ st.markdown('<img src="imagesformodel/ima.jpg" width="100" class="logo-image" />
 # Apply the custom CSS classes
 st.markdown('<p class="header-title">Smart Match</p>', unsafe_allow_html=True)
 st.markdown('<p class="header-subtitle">Your Job and Applicant Recommendation System</p>', unsafe_allow_html=True)
+
+
 
 
 
